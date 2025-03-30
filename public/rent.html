@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent a Car</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Start Renting a Car</h2>
+    <form id="rentForm">
+        <input type="text" id="carId" placeholder="Enter Car ID" required>
+        <button type="submit">Rent Car</button>
+    </form>
+
+    <script>
+        document.getElementById('rentForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const carId = document.getElementById('carId').value;
+
+            const response = await fetch('/rent', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ carId })
+            });
+
+            const data = await response.json();
+            alert(data.message || data.error);
+        });
+    </script>
+</body>
+</html>
