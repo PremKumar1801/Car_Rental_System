@@ -3,36 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Sign Up</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #12141D;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        .container {
+            display: flex;
+            width: 800px;
+            background: #1C1E27;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .left-panel {
+            width: 40%;
+            background: #4A3756;
+            padding: 40px;
+            text-align: center;
+        }
+        .login-link {
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid white;
+        }
+        .right-panel {
+            width: 60%;
+            padding: 40px;
+        }
+        .profile-pic {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .profile-pic img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .upload-icon {
+            display: inline-block;
+            cursor: pointer;
+            background: #fff;
+            color: #1C1E27;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 20px;
+            font-weight: bold;
+            position: relative;
+            top: -15px;
+            left: -10px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .name-fields, .password-fields {
+            display: flex;
+            gap: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .submit-btn {
+            background: white;
+            color: #1C1E27;
+            font-size: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            align-self: center;
+        }
+    </style>
 </head>
 <body>
-    <h2>Register</h2>
-    <form id="registerForm">
-        <input type="text" id="name" placeholder="Full Name" required>
-        <input type="email" id="email" placeholder="Email" required>
-        <input type="password" id="password" placeholder="Password" required>
-        <button type="submit">Register</button>
-    </form>
-    <p>Already have an account? <a href="register.html">Login</a></p> <!-- Fixed link -->
-
-    <script>
-        document.getElementById('registerForm').addEventListener('submit', async function(event) {
-            event.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-
-            const response = await fetch('/register', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ name, email, password })
-            });
-
-            const data = await response.json();
-            alert(data.message || data.error);
-            if (response.ok) window.location.href = 'register.html'; // Redirect to login page
-        });
-    </script>
+    <div class="container">
+        <div class="left-panel">
+            <h1>GENESIS</h1>
+            <p>New User Registration.</p>
+            <a href="#" class="login-link">LOG IN</a>
+        </div>
+        <div class="right-panel">
+            <h2>SIGN UP</h2>
+            <div class="profile-pic">
+                <img src="./images.jpeg" alt="Profile Picture">
+                <input type="file" id="profile-upload" hidden>
+                <label for="profile-upload" class="upload-icon">+</label>
+            </div>
+            <form id="registerForm">
+                <div class="name-fields">
+                    <input type="text" id="first-name" placeholder="Name" required>
+                    <input type="text" id="last-name" placeholder="Last Name" required>
+                </div>
+                <input type="email" id="email" placeholder="Email" required>
+                <div class="password-fields">
+                    <input type="password" id="password" placeholder="Password" required>
+                    <input type="password" id="repeat-password" placeholder="Repeat" required>
+                </div>
+                <button type="submit" class="submit-btn">&#187;</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
