@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent a Car — Browse Our Fleet</title>
+    <meta name="description"
+        content="Browse our premium fleet of rental cars. Find the perfect vehicle for your trip at competitive prices.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- navbar section -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">⚡ Rent Car</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="rent.html">Browse Cars</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-success" href="register.html">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="rent-hero">
+        <div class="container">
+            <h1>Browse Our <span
+                    style="background: linear-gradient(135deg, #00e5ff, #7c4dff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Premium
+                    Fleet</span></h1>
+            <p>Choose from our wide selection of well-maintained vehicles. All cars come with comprehensive insurance
+                and 24/7 roadside assistance.</p>
+        </div>
+    </section>
+
+    <!-- Car Grid -->
+    <section class="container">
+        <div class="car-grid">
+
+            <!-- Car Card 1 -->
+            <div class="car-card reveal">
+                <div class="car-card-img-wrapper">
+                    <img src="https://i.ibb.co/PxNtW0p/Mercedes-Car-EQC-300k-W-Edition-900x598-1.png" alt="Mercedes EQC"
+                        class="car-card-img" />
+                </div>
+                <div class="car-card-body">
+                    <h3>Mercedes EQC</h3>
+                    <div class="car-specs">
+                        <span class="car-spec"><i class="bi bi-people-fill"></i> 5 Seats</span>
+                        <span class="car-spec"><i class="bi bi-gear-fill"></i> Auto</span>
+                        <span class="car-spec"><i class="bi bi-ev-front-fill"></i> Electric</span>
+                    </div>
+                    <div class="car-card-footer">
+                        <div class="car-price">$120 <span>/ day</span></div>
+                        <a href="register.html" class="btn btn-success"
+                            style="padding: 10px 24px; font-size: 0.88rem;">Rent Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Car Card 2 -->
+            <div class="car-card reveal reveal-delay-1">
+                <div class="car-card-img-wrapper">
+                    <img src="https://i.ibb.co/xz6YFgj/pngwing-com-1.png" alt="BMW X5" class="car-card-img" />
+                </div>
+                <div class="car-card-body">
+                    <h3>BMW X5 xDrive</h3>
+                    <div class="car-specs">
+                        <span class="car-spec"><i class="bi bi-people-fill"></i> 5 Seats</span>
+                        <span class="car-spec"><i class="bi bi-gear-fill"></i> Auto</span>
+                        <span class="car-spec"><i class="bi bi-fuel-pump-fill"></i> Petrol</span>
+                    </div>
+                    <div class="car-card-footer">
+                        <div class="car-price">$95 <span>/ day</span></div>
+                        <a href="register.html" class="btn btn-success"
+                            style="padding: 10px 24px; font-size: 0.88rem;">Rent Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Car Card 3 -->
+            <div class="car-card reveal reveal-delay-2">
+                <div class="car-card-img-wrapper">
+                    <img src="https://i.ibb.co/X8LHPvF/pngwing-com-2.png" alt="Audi A4" class="car-card-img" />
+                </div>
+                <div class="car-card-body">
+                    <h3>Audi A4 Sedan</h3>
+                    <div class="car-specs">
+                        <span class="car-spec"><i class="bi bi-people-fill"></i> 5 Seats</span>
+                        <span class="car-spec"><i class="bi bi-gear-fill"></i> Auto</span>
+                        <span class="car-spec"><i class="bi bi-fuel-pump-fill"></i> Diesel</span>
+                    </div>
+                    <div class="car-card-footer">
+                        <div class="car-price">$85 <span>/ day</span></div>
+                        <a href="register.html" class="btn btn-success"
+                            style="padding: 10px 24px; font-size: 0.88rem;">Rent Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Car Card 4 -->
+            <div class="car-card reveal reveal-delay-3">
+                <div class="car-card-img-wrapper">
+                    <img src="https://i.ibb.co/PxNtW0p/Mercedes-Car-EQC-300k-W-Edition-900x598-1.png"
+                        alt="Tesla Model 3" class="car-card-img" />
+                </div>
+                <div class="car-card-body">
+                    <h3>Tesla Model 3</h3>
+                    <div class="car-specs">
+                        <span class="car-spec"><i class="bi bi-people-fill"></i> 5 Seats</span>
+                        <span class="car-spec"><i class="bi bi-gear-fill"></i> Auto</span>
+                        <span class="car-spec"><i class="bi bi-ev-front-fill"></i> Electric</span>
+                    </div>
+                    <div class="car-card-footer">
+                        <div class="car-price">$110 <span>/ day</span></div>
+                        <a href="register.html" class="btn btn-success"
+                            style="padding: 10px 24px; font-size: 0.88rem;">Rent Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Car Card 5 -->
+            <div class="car-card reveal reveal-delay-1">
+                <div class="car-card-img-wrapper">
+                    <img src="https://i.ibb.co/xz6YFgj/pngwing-com-1.png" alt="Toyota Camry" class="car-card-img" />
+                </div>
+                <div class="car-card-body">
+                    <h3>Toyota Camry Hybrid</h3>
+                    <div class="car-specs">
+                        <span class="car-spec"><i class="bi bi-people-fill"></i> 5 Seats</span>
+                        <span class="car-spec"><i class="bi bi-gear-fill"></i> Auto</span>
+                        <span class="car-spec"><i class="bi bi-fuel-pump-fill"></i> Hybrid</span>
+                    </div>
+                    <div class="car-card-footer">
+                        <div class="car-price">$65 <span>/ day</span></div>
+                        <a href="register.html" class="btn btn-success"
+                            style="padding: 10px 24px; font-size: 0.88rem;">Rent Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Car Card 6 -->
+            <div class="car-card reveal reveal-delay-2">
+                <div class="car-card-img-wrapper">
+                    <img src="https://i.ibb.co/X8LHPvF/pngwing-com-2.png" alt="Honda CR-V" class="car-card-img" />
+                </div>
+                <div class="car-card-body">
+                    <h3>Honda CR-V SUV</h3>
+                    <div class="car-specs">
+                        <span class="car-spec"><i class="bi bi-people-fill"></i> 7 Seats</span>
+                        <span class="car-spec"><i class="bi bi-gear-fill"></i> Auto</span>
+                        <span class="car-spec"><i class="bi bi-fuel-pump-fill"></i> Petrol</span>
+                    </div>
+                    <div class="car-card-footer">
+                        <div class="car-price">$75 <span>/ day</span></div>
+                        <a href="register.html" class="btn btn-success"
+                            style="padding: 10px 24px; font-size: 0.88rem;">Rent Now</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <section class="footer-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="address me-5">
+                            <p>Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000</p>
+                            <p>binarcarrental@gmail.com</p>
+                            <p>081-233-334-808</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="navigation">
+                            <p class="item-navigation">Our Service</p>
+                            <p class="item-navigation">why Us</p>
+                            <p class="item-navigation">Testimonial</p>
+                            <p class="item-navigation">FAQ</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="sosmed">
+                            <p>Connect with us</p>
+                            <div class="d-flex">
+                                <i class="bi bi-facebook" id="icon-facebook"></i>
+                                <i class="bi bi-instagram" id="icon-instagram"></i>
+                                <i class="bi bi-twitter" id="icon-twitter"></i>
+                                <i class="bi bi-envelope-at-fill" id="icon-email"></i>
+                                <i class="bi bi-twitch" id="icon-twitch"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="copyright me-5">
+                            <p class="fw-semibold">Copyright Binar 2024</p>
+                            <div class="logo-copyright"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="animations.js"></script>
+</body>
+
+</html>
